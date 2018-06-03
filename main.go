@@ -4,8 +4,10 @@ import (
   "fmt"
 )
 
-var foo string
-var bar int
+var (
+  foo string
+  bar int
+)
 
 func main() {
   foo = "Hello"
