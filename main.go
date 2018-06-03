@@ -14,7 +14,7 @@ const (
   Sunday
 )
 
-func add(i int, j int) int {
+func add(i, j int) int {
   return i + j
 }
 
