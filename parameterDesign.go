@@ -7,7 +7,7 @@ import (
 
 func getUserListSQL(username, email string) string {
   sql := "select * from user"
-  where := []string{}
+  var where []string
 
   if username != "" {
     where = append(where, fmt.Sprintf("username = '%s'", username))
