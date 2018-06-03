@@ -14,9 +14,15 @@ const (
   Sunday
 )
 
+func add(i int, j int) int {
+  return i + j
+}
+
 func main() {
   foo := "Hello"
   bar := 100
+
+  fmt.Println(add(2, 3))
 
   fmt.Println(foo)
   fmt.Println(bar)
