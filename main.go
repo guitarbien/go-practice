@@ -5,8 +5,8 @@ import (
 )
 
 var (
-  foo string = "Hello"
-  bar int    = 100
+  foo = "Hello"
+  bar = 100
 )
 
 func main() {
