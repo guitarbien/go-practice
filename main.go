@@ -2,9 +2,11 @@ package main
 
 import (
   "fmt"
-  . "github.com/guitarbien/go-practice/helloworld"
+
+  _ "github.com/guitarbien/go-practice/helloworld"
 )
 
 func main() {
-  fmt.Println(HelloWorld())
+  // fmt.Println(HelloWorld())
+  fmt.Println("Hello")
 }
