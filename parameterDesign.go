@@ -56,4 +56,8 @@ func main() {
     username: "guitarbien",
     email:    "guitarbien@gmail.com",
   }))
+
+  fmt.Println(getUserListOperationSQL(searchOperation{
+    gender: 1,
+  }))
 }
