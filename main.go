@@ -29,6 +29,12 @@ func foo() func() int {
 }
 
 func main() {
+  barfoo := func(i, j float32) float32 {
+    return i + j
+  }
+  fmt.Printf("%T\n", barfoo)
+  fmt.Println(barfoo(1.45, 2.3))
+
   foobar := foo()
   fmt.Printf("%T\n", foobar)
   fmt.Println(foobar())
