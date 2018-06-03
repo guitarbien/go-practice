@@ -5,11 +5,8 @@ import (
 )
 
 func main() {
-  var foo string
-  var bar int
-
-  foo = "Hello"
-  bar = 100
+  foo := "Hello"
+  bar := 100
 
   fmt.Println(foo)
   fmt.Println(bar)
