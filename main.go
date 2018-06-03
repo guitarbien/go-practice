@@ -4,12 +4,13 @@ import (
   "fmt"
 )
 
-var (
+func main() {
+  var foo string
+  var bar int
+
   foo = "Hello"
   bar = 100
-)
 
-func main() {
   fmt.Println(foo)
   fmt.Println(bar)
   fmt.Println("done !!")
