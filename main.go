@@ -34,6 +34,10 @@ func main() {
   fmt.Println("a:", a)
   fmt.Println("b:", b)
 
+  a, b = b, a
+  fmt.Println("a:", a)
+  fmt.Println("b:", b)
+
   fmt.Println(foo)
   fmt.Println(bar)
   fmt.Println("done !!")
