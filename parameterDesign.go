@@ -19,6 +19,22 @@ func getUserListSQL(username, email string) string {
 
   return sql + " where " + strings.Join(where, " or ")
 }
+
+type searchOperation struct {
+  username string
+  email    string
+}
+
+func getUserListOperationSQL(operator searchOperation) string {
+  sql := "select * from user"
+  var where []string
+
+  if operator.username != "" {
+    where = append(where, fmt.Sprintf("username = '%s'", operator.username))
+  }
+
+  if operator.email != "" {
+    where = append(where, fmt.Sprintf("email = '%s'", operator.email))
   }
 
   return sql + " where " + strings.Join(where, " or ")
@@ -26,5 +42,13 @@ func getUserListSQL(username, email string) string {
 
 func main() {
   fmt.Println(getUserListSQL("guitarbien", ""))
+  fmt.Println(getUserListOperationSQL(searchOperation{
+    username: "guitarbien",
+  }))
+
   fmt.Println(getUserListSQL("guitarbien", "guitarbien@gmail.com"))
+  fmt.Println(getUserListOperationSQL(searchOperation{
+    username: "guitarbien",
+    email: "guitarbien@gmail.com",
+  }))
 }
