@@ -23,6 +23,7 @@ func getUserListSQL(username, email string) string {
 type searchOperation struct {
   username string
   email    string
+  gender   int
 }
 
 func getUserListOperationSQL(operator searchOperation) string {
@@ -37,6 +38,10 @@ func getUserListOperationSQL(operator searchOperation) string {
     where = append(where, fmt.Sprintf("email = '%s'", operator.email))
   }
 
+  if operator.gender != 0 {
+    where = append(where, fmt.Sprintf("gender = '%d'", operator.gender))
+  }
+
   return sql + " where " + strings.Join(where, " or ")
 }
 
@@ -49,6 +54,6 @@ func main() {
   fmt.Println(getUserListSQL("guitarbien", "guitarbien@gmail.com"))
   fmt.Println(getUserListOperationSQL(searchOperation{
     username: "guitarbien",
-    email: "guitarbien@gmail.com",
+    email:    "guitarbien@gmail.com",
   }))
 }
