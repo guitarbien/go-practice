@@ -2,7 +2,7 @@ package main
 
 import (
   "fmt"
-  "github.com/guitarbien/go-practice/helloworld"
+  hihi "github.com/guitarbien/go-practice/helloworld"
 )
 
 func main() {
