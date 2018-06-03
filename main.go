@@ -2,11 +2,15 @@ package main
 
 import (
   "fmt"
-
-  _ "github.com/guitarbien/go-practice/helloworld"
 )
 
+var foo string
+var bar int
+
 func main() {
-  // fmt.Println(HelloWorld())
-  fmt.Println("Hello")
+  foo = "Hello"
+  bar = 100
+  fmt.Println(foo)
+  fmt.Println(bar)
+  fmt.Println("done !!")
 }
