@@ -5,7 +5,7 @@ import (
   "strings"
 )
 
-func getUserListSQL(username, email string, gender int) string {
+func getUserListSQL(username, email string) string {
   sql := "select * from user"
   var where []string
 
@@ -17,8 +17,8 @@ func getUserListSQL(username, email string, gender int) string {
     where = append(where, fmt.Sprintf("email = '%s'", email))
   }
 
-  if gender != 0 {
-    where = append(where, fmt.Sprintf("gender = '%d'", gender))
+  return sql + " where " + strings.Join(where, " or ")
+}
   }
 
   return sql + " where " + strings.Join(where, " or ")
