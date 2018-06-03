@@ -18,4 +18,8 @@ func main() {
   func() {
     fmt.Println("Hello World 3")
   }()
+
+  go func(i, j int) {
+    fmt.Println(i + j)
+  }(1, 2)
 }
