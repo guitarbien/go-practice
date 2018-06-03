@@ -22,7 +22,17 @@ func swap(i, j int) (int, int) {
   return j, i
 }
 
+func foo() func() int {
+  return func() int {
+    return 100
+  }
+}
+
 func main() {
+  foobar := foo()
+  fmt.Printf("%T\n", foobar)
+  fmt.Println(foobar())
+
   foo := "Hello"
   bar := 100
 
