@@ -1,7 +1,10 @@
 package main
 
-import "fmt"
+import (
+  "fmt"
+  "github.com/guitarbien/go-practice/helloworld"
+)
 
 func main() {
-	fmt.Println(helloWorld())
+  fmt.Println(helloworld.HelloWorld())
 }
