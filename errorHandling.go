@@ -12,6 +12,11 @@ func (e errUserNameExist) Error() string {
   return fmt.Sprintf("username %s already exists", e.UserName)
 }
 
+func isUserNameExist(err error) bool {
+  _, ok := err.(errUserNameExist)
+  return ok
+}
+
 func checkUsernameExists(username string) (bool, error) {
   if username == "foo" {
     return true, errUserNameExist{UserName: username}
@@ -22,6 +27,8 @@ func checkUsernameExists(username string) (bool, error) {
 
 func main() {
   if _, err := checkUsernameExists("foo"); err != nil {
-    fmt.Println(err)
+    if isUserNameExist(err) {
+      fmt.Println(err)
+    }
   }
 }
