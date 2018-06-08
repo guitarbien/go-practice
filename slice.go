@@ -3,15 +3,15 @@ package main
 import "fmt"
 
 // pass slice as function argument
-func modify(foo []string)  {
-  foo[1] = "c"
-  fmt.Println("modify foo", foo)
+func addValue(foo []string)  {
+  foo = append(foo, "c")
+  fmt.Println("addValue foo", foo)
 }
 
 func main()  {
   foo := []string{"a", "b"}
   fmt.Println("before foo:", foo)
 
-  modify(foo)
+  addValue(foo)
   fmt.Println("after foo:", foo)
 }
