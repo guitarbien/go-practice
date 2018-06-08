@@ -26,4 +26,8 @@ func main() {
   s2 := append(bar, "d")
   fmt.Println("foo:", foo)
   fmt.Println("s2:", s2)
+
+  s3 := append(bar, "e", "f")
+  fmt.Println("foo:", foo)
+  fmt.Println("s3:", s3)
 }
