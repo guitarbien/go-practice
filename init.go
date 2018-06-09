@@ -12,8 +12,16 @@ func init() {
 
 func init() {
   fmt.Println("init 2")
+  global = 0
+}
+
+var global = convert()
+
+func convert() int {
+  return 100
 }
 
 func main() {
-  fmt.Println("run man")
+  fmt.Println("run main")
+  fmt.Println("global is", global)
 }
