@@ -10,6 +10,7 @@ func main()  {
 func checkValue(i int) {
   switch i {
   case 0:
+    fallthrough
   case 1:
     fmt.Println("check value is ", i)
   }
